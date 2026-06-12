@@ -5,18 +5,22 @@ import { motion } from "framer-motion";
 import { getPublicClient } from "@/lib/supabase";
 
 const defaultSkills = [
-  "Prompt Engineering",
-  "AI Essentials",
-  "Generative AI",
-  "ChatGPT",
-  "Computer Science",
-  "Commerce",
-  "Accounting",
-  "Microsoft Office",
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "Figma",
   "Canva",
-  "Communication",
-  "Problem Solving",
-  "Research",
+  "Adobe Photoshop",
+  "Adobe Illustrator",
+  "Prompt Engineering",
+  "Prompt Optimization",
+  "Generative AI",
+  "AI Content Creation",
+  "AI Workflow Automation",
+  "Social Media Strategy",
+  "UI/UX Design",
+  "Branding",
+  "Responsive Web Design",
 ];
 
 interface Skill {

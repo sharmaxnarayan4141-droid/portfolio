@@ -90,24 +90,24 @@ export default function WorkSection() {
           // Fallback default projects
           setProjects([
             {
-              name: "Portfolio Website",
-              stack: ["Next.js", "Tailwind CSS", "Framer Motion", "Supabase"],
+              name: "Business Website Projects",
+              stack: ["HTML", "CSS", "JavaScript", "Responsive Design"],
               description:
-                "This personal portfolio — built with Next.js 14, Framer Motion, and GSAP — showcasing my background, AI certification, and skills in a premium dark aesthetic.",
+                "Designed responsive websites with clean Home, About, Services, Portfolio, and Contact sections for businesses and brands.",
               sort_order: 1,
             },
             {
-              name: "AI Prompt Engineering Practice",
-              stack: ["ChatGPT", "Prompt Engineering", "Generative AI"],
+              name: "Portfolio Website Projects",
+              stack: ["Next.js", "Tailwind CSS", "Framer Motion", "UI/UX"],
               description:
-                "Applied prompt crafting workflows for research, content generation, and productivity automation. Completed as part of the SIN School of AI certification curriculum.",
+                "Built personal portfolio websites for showcasing skills, projects, and digital identity with modern design aesthetics.",
               sort_order: 2,
             },
             {
-              name: "Commerce + CS Academic Projects",
-              stack: ["MS Office", "Computer Science", "Accounting"],
+              name: "AI-Based Creative Projects",
+              stack: ["Generative AI", "Prompt Engineering", "AI Content Creation"],
               description:
-                "Academic projects combining Commerce fundamentals with Computer Science applications, covering financial modeling, data handling, and presentation design.",
+                "Used Generative AI tools for content creation, design ideation, and AI-assisted creative workflows.",
               sort_order: 3,
             },
           ]);

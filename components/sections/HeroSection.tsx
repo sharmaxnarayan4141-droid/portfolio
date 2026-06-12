@@ -7,7 +7,7 @@ import { getPublicClient } from "@/lib/supabase";
 
 const defaultName = "Narayan Sharma";
 const defaultSubtitle =
-  "AI &amp; Prompt Engineering Enthusiast &nbsp;&middot;&nbsp; Commerce + CS Student &nbsp;&middot;&nbsp; Jodhpur, Rajasthan";
+  "Web Designer &nbsp;&middot;&nbsp; AI Enthusiast &nbsp;&middot;&nbsp; Prompt Engineer &nbsp;&middot;&nbsp; Graphic Designer &nbsp;&middot;&nbsp; Social Media Manager";
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);

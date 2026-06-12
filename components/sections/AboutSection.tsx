@@ -12,14 +12,14 @@ interface AboutContent {
 
 const defaultContent: AboutContent = {
   intro:
-    "I'm Narayan Sharma — a Class 12 student studying Commerce with Computer Science at St. Austin Sr. Sec. School, Jodhpur, Rajasthan.",
+    "I'm Narayan Sharma, a creative Web Designer, Graphic Designer, Social Media Manager, and AI Enthusiast based in Jodhpur, Rajasthan.",
   bio:
-    "I am passionate about Artificial Intelligence and Prompt Engineering. I believe in the intersection of discipline and creativity — whether it is crafting precise prompts, building digital experiences, or solving real-world problems through technology.",
+    "I specialize in building modern, responsive websites, branding designs, and AI-powered digital experiences. As a student at SI School of AI, I've gained strong skills in Prompt Engineering, Prompt Essentials, and Generative AI — combining design, technology, and AI to craft innovative solutions for businesses and individuals.",
   facts: [
     { label: "Location", value: "Jodhpur, Rajasthan, India" },
-    { label: "School", value: "St. Austin Sr. Sec. School" },
-    { label: "Stream", value: "Commerce + Computer Science" },
-    { label: "Focus", value: "AI & Prompt Engineering" },
+    { label: "Institute", value: "SI School of AI" },
+    { label: "Expertise", value: "Web Design, Graphic Design, AI" },
+    { label: "Focus", value: "Design & AI Solutions" },
   ],
 };
 
