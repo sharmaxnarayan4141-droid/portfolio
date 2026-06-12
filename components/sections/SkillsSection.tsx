@@ -32,7 +32,7 @@ function MarqueeRow({ items, direction = "left" }: { items: string[]; direction?
         {[...items, ...items, ...items].map((skill, i) => (
           <span
             key={i}
-            className="inline-flex items-center px-4 py-1.5 text-xs uppercase tracking-widest font-sans text-primary border border-[#333] bg-background rounded-none whitespace-nowrap cursor-default transition-all duration-300 hover:border-white/40 hover:[box-shadow:0_0_8px_rgba(255,255,255,0.2)] hover:text-accent"
+            className="inline-flex items-center px-3 md:px-4 py-1 md:py-1.5 text-[10px] md:text-xs uppercase tracking-widest font-sans text-primary border border-[#333] bg-background rounded-none whitespace-nowrap cursor-default transition-all duration-300 hover:border-white/40 hover:[box-shadow:0_0_8px_rgba(255,255,255,0.2)] hover:text-accent"
           >
             {skill}
           </span>
@@ -67,10 +67,10 @@ export default function SkillsSection() {
   const skillsRow2 = [...skills].reverse();
 
   return (
-    <section id="skills" className="relative w-full bg-background py-24 overflow-hidden">
+    <section id="skills" className="relative w-full bg-background py-16 md:py-24 overflow-hidden">
       <div className="absolute top-0 w-full h-[1px] bg-muted/20" />
 
-      <div className="max-w-7xl mx-auto px-8 mb-14">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 mb-10 md:mb-14">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ export default function SkillsSection() {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="relative inline-block"
         >
-          <h2 className="font-sans font-bold text-5xl md:text-7xl uppercase tracking-tight text-primary">
+          <h2 className="font-sans font-bold text-4xl md:text-7xl uppercase tracking-tight text-primary">
             Skills
           </h2>
           <motion.div
@@ -91,7 +91,7 @@ export default function SkillsSection() {
         </motion.div>
       </div>
 
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col gap-3 md:gap-4 w-full">
         <MarqueeRow items={skills} direction="left" />
         <MarqueeRow items={skillsRow2} direction="right" />
       </div>

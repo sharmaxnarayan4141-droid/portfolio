@@ -11,7 +11,7 @@ function Toast({ message, type }: { message: string; type: "success" | "error" }
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 30 }}
         transition={{ duration: 0.4 }}
-        className={`fixed bottom-8 left-1/2 -translate-x-1/2 z-50 px-6 py-4 text-sm font-sans tracking-widest uppercase border ${
+        className={`fixed bottom-8 left-1/2 -translate-x-1/2 z-50 px-4 md:px-6 py-3 md:py-4 text-xs md:text-sm font-sans tracking-widest uppercase border ${
           type === "success"
             ? "border-primary/40 bg-secondary text-primary"
             : "border-red-900 bg-secondary text-red-400"
@@ -43,13 +43,13 @@ function FloatingInput({
   const [focused, setFocused] = useState(false);
   const isFloated = focused || value.length > 0;
   const baseClass =
-    "w-full bg-transparent border-b border-[#333] focus:border-primary outline-none text-primary text-base font-sans font-light pt-5 pb-2 placeholder-transparent transition-colors duration-300 caret-primary resize-none";
+    "w-full bg-transparent border-b border-[#333] focus:border-primary outline-none text-primary text-sm md:text-base font-sans font-light pt-5 pb-2 placeholder-transparent transition-colors duration-300 caret-primary resize-none";
 
   return (
     <div className="relative">
       <label
         htmlFor={id}
-        className={`absolute left-0 font-sans text-xs uppercase tracking-[0.25em] transition-all duration-300 pointer-events-none ${
+        className={`absolute left-0 font-sans text-[10px] md:text-xs uppercase tracking-[0.25em] transition-all duration-300 pointer-events-none ${
           isFloated ? "top-0 text-muted text-[10px]" : "top-4 text-muted/60 text-xs"
         }`}
       >
@@ -113,22 +113,22 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative w-full bg-background py-24 md:py-36">
+    <section id="contact" className="relative w-full bg-background py-16 md:py-36">
       <div className="absolute top-0 w-full h-[1px] bg-muted/20" />
       {toast && <Toast message={toast.message} type={toast.type} />}
 
-      <div className="max-w-4xl mx-auto px-8">
+      <div className="max-w-4xl mx-auto px-6 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mb-16"
+          className="mb-12 md:mb-16"
         >
-          <h2 className="font-serif text-6xl md:text-8xl font-bold text-primary tracking-tight leading-none mb-4">
+          <h2 className="font-serif text-4xl md:text-8xl font-bold text-primary tracking-tight leading-none mb-4">
             Let&apos;s Talk
           </h2>
-          <svg viewBox="0 0 400 12" className="w-48 md:w-72 h-3 overflow-visible">
+          <svg viewBox="0 0 400 12" className="w-36 md:w-72 h-3 overflow-visible">
             <motion.path
               d="M0 6 Q25 0 50 6 Q75 12 100 6 Q125 0 150 6 Q175 12 200 6 Q225 0 250 6 Q275 12 300 6 Q325 0 350 6 Q375 12 400 6"
               fill="none"
@@ -148,9 +148,9 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="flex flex-col gap-10"
+          className="flex flex-col gap-8 md:gap-10"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
             <FloatingInput
               id="contact-name"
               label="Name"
@@ -181,7 +181,7 @@ export default function ContactSection() {
               id="contact-submit"
               type="submit"
               disabled={loading}
-              className="group relative overflow-hidden border border-primary px-10 py-4 text-sm uppercase tracking-[0.25em] font-sans text-primary transition-colors duration-300 disabled:opacity-40 disabled:cursor-not-allowed"
+              className="group relative overflow-hidden border border-primary px-8 md:px-10 py-3 md:py-4 text-xs md:text-sm uppercase tracking-[0.25em] font-sans text-primary transition-colors duration-300 disabled:opacity-40 disabled:cursor-not-allowed"
             >
               <span className="absolute inset-0 bg-primary translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out" />
               <span className="relative group-hover:text-background transition-colors duration-500 ease-in-out flex items-center gap-3">

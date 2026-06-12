@@ -144,9 +144,9 @@ export default function WorkSection() {
   }, []);
 
   return (
-    <section id="work" className="relative w-full bg-background py-24">
+    <section id="work" className="relative w-full bg-background py-16 md:py-24">
       <div className="absolute top-0 w-full h-[1px] bg-muted/20" />
-      <div className="max-w-7xl mx-auto px-8">
+      <div className="max-w-7xl mx-auto px-6 md:px-8">
 
         {/* === CERTIFICATION === */}
         <motion.div
@@ -156,15 +156,15 @@ export default function WorkSection() {
           transition={{ duration: 0.7 }}
           className="mb-24"
         >
-          <h2 className="font-serif text-6xl md:text-8xl font-bold text-primary mb-12 tracking-tight">
+          <h2 className="font-serif text-4xl md:text-8xl font-bold text-primary mb-8 md:mb-12 tracking-tight">
             Credentials
           </h2>
 
-          <div className="group border border-[#1f1f1f] hover:border-primary/30 hover:bg-secondary transition-all duration-300 p-8 md:p-12">
+          <div className="group border border-[#1f1f1f] hover:border-primary/30 hover:bg-secondary transition-all duration-300 p-5 md:p-12">
             <div className="flex items-start gap-4 mb-8">
               <BadgeCheck className="text-primary mt-1 shrink-0 w-6 h-6" />
               <div>
-                <h3 className="font-serif text-2xl md:text-3xl text-primary mb-1">
+                <h3 className="font-serif text-lg md:text-3xl text-primary mb-1">
                   AI Essentials and Prompt Mastery Course
                 </h3>
                 <p className="text-sm text-muted font-sans uppercase tracking-widest">
@@ -196,7 +196,7 @@ export default function WorkSection() {
           transition={{ duration: 0.7 }}
           className="mb-24"
         >
-          <h2 className="font-serif text-6xl md:text-8xl font-bold text-primary mb-12 tracking-tight">
+          <h2 className="font-serif text-4xl md:text-8xl font-bold text-primary mb-8 md:mb-12 tracking-tight">
             Education
           </h2>
 
@@ -220,7 +220,7 @@ export default function WorkSection() {
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <div className="flex-1">
-                  <h3 className="font-serif text-2xl md:text-3xl text-primary mb-2">{edu.name}</h3>
+                  <h3 className="font-serif text-xl md:text-3xl text-primary mb-2">{edu.name}</h3>
                   <p className="text-sm text-accent font-sans font-light mb-1">{edu.sub}</p>
                   <p className="text-xs text-muted font-sans uppercase tracking-widest">{edu.location}</p>
                 </div>
@@ -237,7 +237,7 @@ export default function WorkSection() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="font-serif text-6xl md:text-8xl font-bold text-primary mb-12 tracking-tight">
+          <h2 className="font-serif text-4xl md:text-8xl font-bold text-primary mb-8 md:mb-12 tracking-tight">
             Work
           </h2>
 
@@ -261,7 +261,7 @@ export default function WorkSection() {
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <div className="flex-1">
-                  <h3 className="font-serif text-2xl md:text-4xl text-primary group-hover:text-accent transition-colors duration-300 mb-3">
+                  <h3 className="font-serif text-xl md:text-4xl text-primary group-hover:text-accent transition-colors duration-300 mb-3">
                     {project.name}
                   </h3>
                   <p className="font-sans text-sm text-muted font-light leading-relaxed max-w-xl mb-4">

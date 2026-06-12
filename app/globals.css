@@ -19,6 +19,13 @@ body {
   cursor: none; /* Hide default cursor for custom cursor */
 }
 
+/* Show default cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+}
+
 /* Lenis Smooth Scroll Base Styles */
 html.lenis, html.lenis body {
   height: auto;
@@ -39,3 +46,11 @@ html.lenis, html.lenis body {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
+
+/* Prevent horizontal overflow on mobile */
+img, svg, video, canvas, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+

@@ -66,16 +66,16 @@ export default function HeroSection() {
     <section
       ref={containerRef}
       id="home"
-      className="relative w-full h-screen flex flex-col justify-center items-center overflow-hidden bg-background pt-20"
+      className="relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden bg-background pt-20 md:pt-20"
       style={{ perspective: "1200px" }}
     >
       <motion.div
         style={{ y: textY, opacity: textOpacity }}
-        className="relative z-10 w-full max-w-7xl px-8 flex flex-col items-center"
+        className="relative z-10 w-full max-w-7xl px-6 md:px-8 flex flex-col items-center"
       >
         {/* Staggered Name */}
         <motion.div
-          className="flex flex-wrap justify-center font-serif text-[clamp(3.5rem,9vw,110px)] leading-none text-primary mb-6"
+          className="flex flex-wrap justify-center font-serif text-[clamp(2.5rem,10vw,110px)] leading-none text-primary mb-4 md:mb-6"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -84,59 +84,38 @@ export default function HeroSection() {
             <motion.span
               key={index}
               variants={letterVariants}
-              className={char === " " ? "w-[clamp(0.8rem,2.5vw,2.5rem)]" : "inline-block"}
+              className={char === " " ? "w-[clamp(0.5rem,2.5vw,2.5rem)]" : "inline-block"}
             >
               {char}
             </motion.span>
           ))}
         </motion.div>
 
-        {/* Profile Photo + PORTFOLIO overlap */}
-        <div className="relative w-full flex justify-center items-center h-[280px] md:h-[420px] mt-4">
-
-          {/* Photo — tilted, Framer Motion animated */}
+        {/* Profile Photo */}
+        <div className="w-full flex justify-center items-center mt-4 md:mt-8 mb-2 md:mb-4">
           <motion.div
             initial={{ opacity: 0, y: 60, rotate: -20, scale: 0.85 }}
             animate={{ opacity: 1, y: 0, rotate: -5, scale: 1 }}
             transition={{ duration: 1.1, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
             style={{ scale: imageScale, rotate: imageRotate }}
-            className="absolute z-10 w-44 h-64 md:w-64 md:h-96 shadow-2xl"
           >
-            {/* Glow behind photo */}
+            {/* Gradient border wrapper with float animation (Framer Motion) */}
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.5, duration: 1 }}
-              className="absolute inset-0 -z-10 blur-2xl scale-110 bg-white/5 rounded-sm"
-            />
-            <div className="relative w-full h-full overflow-hidden rounded-sm">
-              <Image
-                src="/assets/profile.jpg"
-                alt="Narayan Sharma"
-                fill
-                className="object-cover object-top grayscale-[20%] hover:grayscale-0 transition-all duration-700"
-                priority
-              />
-              {/* Subtle dark gradient at bottom */}
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent pointer-events-none" />
-            </div>
+              animate={{ y: [0, -12, 0] }}
+              transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+              className="w-32 h-32 md:w-64 md:h-64 max-w-[250px] max-h-[250px] md:max-w-none md:max-h-none p-[3px] rounded-full bg-gradient-to-br from-purple-500 via-fuchsia-500 to-blue-500 shadow-[0_0_30px_rgba(168,85,247,0.35)] hover:shadow-[0_0_60px_rgba(168,85,247,0.55)] transition-all duration-500 hover:scale-105"
+            >
+              <div className="relative w-full h-full rounded-full overflow-hidden bg-background">
+                <Image
+                  src="/assets/profile.jpg"
+                  alt="Narayan Sharma"
+                  fill
+                  className="object-cover object-top grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+                  priority
+                />
+              </div>
+            </motion.div>
           </motion.div>
-
-          {/* "PORTFOLIO" text — overlapping */}
-          <motion.h2
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 1.1, ease: "easeOut" }}
-            className="relative z-20 font-sans font-black text-[clamp(3rem,9vw,96px)] uppercase tracking-tighter select-none"
-            style={{
-              color: "transparent",
-              WebkitTextStroke: "1px rgba(255,255,255,0.15)",
-              textShadow: "none",
-              mixBlendMode: "screen",
-            }}
-          >
-            PORTFOLIO
-          </motion.h2>
         </div>
 
         {/* Subtitle */}
@@ -144,7 +123,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.6 }}
-          className="mt-8 md:mt-12 text-[10px] md:text-xs tracking-[0.35em] uppercase text-muted text-center max-w-2xl"
+          className="mt-6 md:mt-12 text-[9px] md:text-xs tracking-[0.3em] md:tracking-[0.35em] uppercase text-muted text-center max-w-2xl px-2"
         >
 {subtitle}
         </motion.p>
@@ -154,13 +133,13 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2.2, duration: 1 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+          className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         >
           <span className="text-[10px] uppercase tracking-[0.3em] text-muted font-sans">Scroll</span>
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-            className="w-[1px] h-8 bg-muted/50"
+            className="w-[1px] h-6 md:h-8 bg-muted/50"
           />
         </motion.div>
       </motion.div>
