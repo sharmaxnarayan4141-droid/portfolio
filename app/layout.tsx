@@ -15,34 +15,37 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Narayan Sharma | AI & Prompt Engineering Enthusiast",
+  title: "Narayan Sharma | Web Designer · AI Enthusiast · Prompt Engineer",
   description:
-    "Portfolio of Narayan Sharma — AI & Prompt Engineering Enthusiast, Commerce + CS student at St. Austin Sr. Sec. School, Jodhpur, Rajasthan. Certified by SIN School of AI.",
+    "Portfolio of Narayan Sharma — Web Designer, Graphic Designer, Social Media Manager, and AI Enthusiast based in Jodhpur, Rajasthan. Specializing in modern websites, branding, and AI-powered digital experiences.",
   keywords: [
     "Narayan Sharma",
-    "Prompt Engineering",
-    "AI Essentials",
-    "Generative AI",
-    "SIN School of AI",
-    "Portfolio",
+    "Web Designer",
+    "AI Enthusiast",
+    "Prompt Engineer",
+    "Graphic Designer",
+    "Social Media Manager",
+    "UI/UX Design",
     "Jodhpur",
     "Rajasthan",
-    "Commerce Computer Science",
+    "Web Development",
+    "Branding",
+    "Generative AI",
   ],
   authors: [{ name: "Narayan Sharma" }],
   openGraph: {
-    title: "Narayan Sharma | AI & Prompt Engineering Enthusiast",
+    title: "Narayan Sharma | Web Designer · AI Enthusiast · Prompt Engineer",
     description:
-      "Portfolio of Narayan Sharma — AI & Prompt Engineering Enthusiast, certified by SIN School of AI. Commerce + CS Student, Jodhpur, Rajasthan.",
+      "Portfolio of Narayan Sharma — Web Designer, Graphic Designer, Social Media Manager, and AI Enthusiast based in Jodhpur, Rajasthan.",
     type: "website",
     locale: "en_IN",
     siteName: "Narayan Sharma Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Narayan Sharma | AI & Prompt Engineering Enthusiast",
+    title: "Narayan Sharma | Web Designer · AI Enthusiast · Prompt Engineer",
     description:
-      "Portfolio of Narayan Sharma — AI Enthusiast, certified in Prompt Engineering. Commerce + CS Student, Jodhpur, India.",
+      "Portfolio of Narayan Sharma — Web Designer, Graphic Designer, Social Media Manager, and AI Enthusiast from Jodhpur, Rajasthan.",
   },
   robots: {
     index: true,
